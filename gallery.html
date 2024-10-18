@@ -20,9 +20,101 @@
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 </head>
 
 <body>
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		document.getElementById('loadMoreBtn').addEventListener('click', function(event) {
+			event.preventDefault(); // Prevent the link from navigating
+	
+		// Define the new content (images or divs) you want to add
+		const newImageDivs = `
+		<section class="gallery_area section_gap" id="gallery">
+		<div class="container f-carousel myCarousel">
+			<div class="f-carousel__slide">
+				<div class="filters gallery-filter">
+					<ul>
+						<li class="active" data-filter=".all"></li>
+					</ul>
+				</div>
+
+				<div class="filters-content">
+					<div class="row gallery-grid">
+						<div class="col-lg-4 col-md-6 all">
+									<div class="single-gallery">
+										<div class="overlay"></div>
+										<img class="img-fluid w-100" src="img/Home/room.jpg" alt="">
+										<div class="icon">
+											<a href="img/Home/room.jpg" class="img-pop-home">
+												<img src="img/zoom-icon.png" alt="">
+											</a>
+										</div>
+									</div>
+						</div>
+						
+						<div class="col-lg-4 col-md-6 all">
+									<div class="single-gallery">
+										<div class="overlay"></div>
+										<img class="img-fluid w-100" src="/img/home/room5.jpg" alt="">
+										<div class="icon">
+											<a href="/img/home/room5.jpg" class="img-pop-home">
+												<img src="img/zoom-icon.png" alt="">
+											</a>
+										</div>
+									</div>
+						</div>
+						<div class="col-lg-4 col-md-6 all">
+									<div class="single-gallery">
+										<div class="overlay"></div>
+										<img class="img-fluid w-100" src="./img/home/home4people.jpg" alt="">
+										<div class="icon">
+											<a href="./img/home/home4people.jpg" class="img-pop-home">
+												<img src="img/zoom-icon.png" alt="">
+											</a>
+										</div>
+									</div>
+						</div>
+						<div class="col-lg-4 col-md-6 all">
+									<div class="single-gallery">
+										<div class="overlay"></div>
+										<img class="img-fluid w-100" src="./img/home/firstfloor.jpg" alt="">
+										<div class="icon">
+											<a href="./img/home/firstfloor.jpg" class="img-pop-home">
+												<img src="img/zoom-icon.png" alt="">
+											</a>
+										</div>
+									</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		`;
+	
+		// Append the new content to the image container
+		document.getElementById('imageContainer').insertAdjacentHTML('beforeend', newImageDivs);
+		document.getElementById('loadMoreBtn').style.display = 'none'; // Option 1: Hide the button
+
+	});
+});
+	
+</script>
+<script>
+    $(document).ready(function() {
+        $('.img-pop-home').magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true // This enables the gallery feature for multiple images
+            }
+        });
+    });
+</script>
 
 	<!--================Header Menu Area =================-->
 	<header class="header_area">
@@ -30,29 +122,17 @@
 			<div class="container">
 				<div class="float-left">
 					<ul class="list header_social">
-						<li><a href="#">Contact Us +44 (012) 5689 3264</a></li>
+						<li><a href="#">Contact Us 7306160320</a></li>
 					</ul>
 				</div>
-				<div class="float-right">
-					<select>
-						<option value="1">USD</option>
-						<option value="1">EUR</option>
-						<option value="1">AOA</option>
-						<option value="1">AUD</option>
-					</select>
-					<select>
-						<option value="1">ENG</option>
-						<option value="1">FRA</option>
-						<option value="1">BAN</option>
-					</select>
-				</div>
+				
 			</div>
 		</div>
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo/Untitled design.png" alt=""></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -62,25 +142,10 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item "><a class="nav-link" href="index.html">Home</a></li>
 							<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
 							<li class="nav-item active"><a class="nav-link" href="gallery.html">Gallery</a></li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Pages</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-									<li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Blog</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-								</ul>
-							</li>
+							<li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
 							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 						</ul>
 					</div>
@@ -91,7 +156,7 @@
 	<!--================Header Menu Area =================-->
 
 	<!--================Home Banner Area =================-->
-	<section class="banner_area">
+	<section class="banner_area1">
 		<div class="banner_inner d-flex align-items-center">
 			<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
 			<div class="container">
@@ -121,9 +186,9 @@
 					<div class="col-lg-4 col-md-6 all">
 						<div class="single-gallery">
 							<div class="overlay"></div>
-							<img class="img-fluid w-100" src="img/room/room1.jpg" alt="">
+							<img class="img-fluid w-100" src="img/Home/filmstarts.jpg" alt="">
 							<div class="icon">
-								<a href="img/room/room1.jpg" class="img-pop-home">
+								<a href="img/Home/filmstarts.jpg" class="img-pop-home">
 									<img src="img/zoom-icon.png" alt="">
 								</a>
 							</div>
@@ -132,9 +197,9 @@
 					<div class="col-lg-4 col-md-6 all">
 						<div class="single-gallery">
 							<div class="overlay"></div>
-							<img class="img-fluid w-100" src="img/room/room2.jpg" alt="">
+							<img class="img-fluid w-100" src="img/Home/home4people.jpg" alt="">
 							<div class="icon">
-								<a href="img/room/room2.jpg" class="img-pop-home">
+								<a href="img/Home/home4people.jpg" class="img-pop-home">
 									<img src="img/zoom-icon.png" alt="">
 								</a>
 							</div>
@@ -143,9 +208,9 @@
 					<div class="col-lg-4 col-md-6 all">
 						<div class="single-gallery">
 							<div class="overlay"></div>
-							<img class="img-fluid w-100" src="img/room/room3.jpg" alt="">
+							<img class="img-fluid w-100" src="img/Home/pepper.jpg" alt="">
 							<div class="icon">
-								<a href="img/room/room3.jpg" class="img-pop-home">
+								<a href="img/Home/pepper.jpg" class="img-pop-home">
 									<img src="img/zoom-icon.png" alt="">
 								</a>
 							</div>
@@ -154,9 +219,9 @@
 					<div class="col-lg-4 col-md-6 all">
 						<div class="single-gallery">
 							<div class="overlay"></div>
-							<img class="img-fluid w-100" src="img/room/room4.jpg" alt="">
+							<img class="img-fluid w-100" src="img/Home/greentree.jpg" alt="">
 							<div class="icon">
-								<a href="img/room/room4.jpg" class="img-pop-home">
+								<a href="img/Home/greentree.jpg" class="img-pop-home">
 									<img src="img/zoom-icon.png" alt="">
 								</a>
 							</div>
@@ -165,9 +230,9 @@
 					<div class="col-lg-4 col-md-6 all">
 						<div class="single-gallery">
 							<div class="overlay"></div>
-							<img class="img-fluid w-100" src="img/room/room5.jpg" alt="">
+							<img class="img-fluid w-100" src="img/Home/homelotofpeople.jpg" alt="">
 							<div class="icon">
-								<a href="img/room/room5.jpg" class="img-pop-home">
+								<a href="img/Home/homelotofpeople.jpg" class="img-pop-home">
 									<img src="img/zoom-icon.png" alt="">
 								</a>
 							</div>
@@ -176,9 +241,9 @@
 					<div class="col-lg-4 col-md-6 all">
 						<div class="single-gallery">
 							<div class="overlay"></div>
-							<img class="img-fluid w-100" src="img/room/room6.jpg" alt="">
+							<img class="img-fluid w-100" src="img/Home/multiplebedroom.jpg" alt="">
 							<div class="icon">
-								<a href="img/room/room6.jpg" class="img-pop-home">
+								<a href="img/Home/multiplebedroom.jpg" class="img-pop-home">
 									<img src="img/zoom-icon.png" alt="">
 								</a>
 							</div>
@@ -187,11 +252,21 @@
 				</div>
 			</div>
 
+			<!-- <div class="text-center mt-25">
+				<a href="" class="main_btn">Load More Image</a>
+			</div> -->
 			<div class="text-center mt-25">
-				<a href="#" class="main_btn">Load More Image</a>
+				<a href="#" id="loadMoreBtn" class="main_btn">Load More Images</a>
 			</div>
+			
+			<!-- A container where the new images will be loaded -->
+			<div id="imageContainer" class="image_container mt-4">
+				<!-- Initially, there are no extra images -->
+			</div>
+			
 		</div>
 	</section>
+	
 	<!--================End Gallery Area =================-->
 
 	<!--================ start footer Area  =================-->
@@ -202,8 +277,7 @@
 					<div class="single-footer-widget">
 						<h6>About Agency</h6>
 						<p>
-							The world has become so fasted that people don’t want to standby reading page of info they would much rather
-							look at a presentation and understand message.
+							Nestled in Wayanad's lush greenery and misty peaks,our homestay is perfect for nature lovers and adventurers.Known as the "Spice Garden of the South,"Wayanad is home to rich history,coffee,and tea plantations.
 						</p>
 					</div>
 				</div>
@@ -212,24 +286,63 @@
 						<h6>Quick Links</h6>
 						<div class="row">
 							<ul class="col footer-nav">
-								<li><a href="#">Sitemaps</a></li>
-								<li><a href="#">Categories</a></li>
-								<li><a href="#">Archives</a></li>
-								<li><a href="#">Advertise</a></li>
-								<li><a href="#">Ad Choice</a></li>
+								<li><a href="./index.html">Home</a></li>
+								<li><a href="./about-us.html">About</a></li>
+								<li><a href="./gallery.html">Gallery</a></li>
+								<li><a href="./rooms.html">Rooms</a></li>
+								<li><a href="./contact.html">Contact</a></li>
 							</ul>
-							<ul class="col footer-nav">
+							<!-- <ul class="col footer-nav">
 								<li><a href="#">Privacy Policy</a></li>
 								<li><a href="#">Terms of Use</a></li>
 								<li><a href="#">Help Center</a></li>
 								<li><a href="#">Newsletters</a></li>
 								<li><a href="#">Feedback</a></li>
-							</ul>
+							</ul> -->
 						</div>
 					</div>
 				</div>
+				<!-- Newsletter -->
+<div class="col-xl-4 col-md-6 col-lg-4">
+	<div class="footer_widget">
+	  <h3 class="footer_title" style="color: azure;">Newsletter</h3>
+	  <div
+		id="successMessage1"
+		style="display: none;"
+		class="alert alert-success text-center"
+	  >
+		Thank you! for Subscribe
+	  </div>
+	  <form method="post" id="contactform1" class="newsletter_form">
+		<input
+		  style="color: rgb(75, 75, 75) !important;"
+		  type="email"
+		  name="email"
+		  required
+		  placeholder="Enter your mail"
+		/>
+		<button id="s-btn1">
+		  Subscribe
+		</button>
 
-				<div class="col-lg-3  col-md-6 col-sm-6">
+		<button style="display: none;" id="loading1">
+		  Subscribing...
+		</button>
+	  </form>
+	  <p class="newsletter_text">
+		Subscribe newsletter to get updates
+	  </p>
+	</div>
+
+	<style>
+	  .newsletter_form input::placeholder {
+		color: #ccc !important; /* Adjust color as needed */
+	  }
+	</style>
+</div>
+
+<!-- newsletter end  -->
+				<!-- <div class="col-lg-3  col-md-6 col-sm-6">
 					<div class="single-footer-widget">
 						<h6>Newsletter</h6>
 						<p>For business professionals caught between high OEM price mediocre print and graphic.</p>
@@ -249,16 +362,16 @@
 										<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
 									</div>
 
-									<!-- <div class="col-lg-4 col-md-4">
-											<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
-										</div>  -->
+									<div class="col-lg-4 col-md-4">
+										<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+									</div> 
 								</div>
 								<div class="info"></div>
 							</form>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-3  col-md-6 col-sm-6">
+				</div> -->
+				<!-- <div class="col-lg-3  col-md-6 col-sm-6">
 					<div class="single-footer-widget mail-chimp">
 						<h6 class="mb-20">Instafeed</h6>
 						<ul class="instafeed d-flex flex-wrap">
@@ -272,20 +385,20 @@
 							<li><img src="img/instagram/Image-08.jpg" alt=""></li>
 						</ul>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
 				<div>
 					<p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.auxxweb.in/#" target="_blank">Auxxweb</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 				</div>
-				<div class="footer-social d-flex align-items-center">
+				<!-- <div class="footer-social d-flex align-items-center">
 					<a href="#"><i class="fa fa-facebook"></i></a>
 					<a href="#"><i class="fa fa-twitter"></i></a>
 					<a href="#"><i class="fa fa-dribbble"></i></a>
 					<a href="#"><i class="fa fa-behance"></i></a>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</footer>
@@ -312,6 +425,49 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="vendors/counter-up/jquery.counterup.js"></script>
 	<script src="js/mail-script.js"></script>
 	<script src="js/theme.js"></script>
+	<script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#contactform1').submit((e) => {
+          e.preventDefault()
+
+          const loading = document.getElementById('loading1')
+          const btn = document.getElementById('s-btn1')
+          const successMessage = document.getElementById('successMessage1') // Updated ID
+
+          loading.style.display = 'block'
+          btn.style.display = 'none'
+
+          $.ajax({
+            url:
+              'https://script.google.com/macros/s/AKfycbyH6foigFQ6qbqTUmIFdKD7UqxGi5pgH8EmNKP2-ZwYHhmf_Qq9hfnJ1JyEBcUvRuzl/exec',
+            data: $('#contactform1').serialize(),
+            method: 'post',
+            success: function (response) {
+              if (successMessage) {
+                successMessage.style.display = 'block' // Show success message
+              }
+              // Clear form fields
+              $('#contactform1')[0].reset()
+
+              btn.style.display = 'block'
+              loading.style.display = 'none'
+            },
+            error: function (err) {
+              loading.style.display = 'none'
+              btn.style.display = 'block'
+              alert('Something went wrong. Please try again.')
+            },
+          })
+        })
+      })
+    </script>
 </body>
 
 </html>
