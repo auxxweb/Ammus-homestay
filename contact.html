@@ -5,8 +5,8 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" href="img/favicon.png" type="image/png">
-	<title>Radisson Hotel</title>
+	<link rel="icon" href="img/logo/Untitled design.png" type="image/png">
+	<title>Contact</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -452,7 +452,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/mail-script.js"></script>
 
     <script src="js/main.js"></script>
-    <script>
+    <!-- <script>
         $(document).ready(function () {
           $('#contactform').submit((e) => {
             e.preventDefault()
@@ -487,7 +487,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             })
           })
         })
-      </script>
+      </script> -->
     <script>
       $(document).ready(function () {
         $('#contactform1').submit((e) => {
@@ -524,6 +524,56 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         })
       })
     </script>
+    <script>
+      $(document).ready(function () {
+        $('#contactform').submit((e) => {
+          e.preventDefault()
+    
+          // Validation
+          const name = $('#name').val().trim();
+          const email = $('#email').val().trim();
+          const phoneNumber = $('#phoneNumber').val().trim();
+          const message = $('#message').val().trim();
+    
+          // Check if all fields have values
+          if (!name || !email || !phoneNumber || !message) {
+            alert('Please fill in all fields.');
+            return;
+          }
+    
+          const loading = document.getElementById('loading');
+          const btn = document.getElementById('s-btn');
+          const successMessage = document.getElementById('successMessage');
+    
+          loading.style.display = 'block';
+          btn.style.display = 'none';
+    
+          $.ajax({
+            url:
+              'https://script.google.com/macros/s/AKfycbyH6foigFQ6qbqTUmIFdKD7UqxGi5pgH8EmNKP2-ZwYHhmf_Qq9hfnJ1JyEBcUvRuzl/exec',
+            data: $('#contactform').serialize(),
+            method: 'post',
+            success: function (response) {
+              if (successMessage) {
+                successMessage.style.display = 'block';
+              }
+    
+              // Clear form fields
+              $('#contactform')[0].reset();
+    
+              btn.style.display = 'block';
+              loading.style.display = 'none';
+            },
+            error: function (err) {
+              loading.style.display = 'none';
+              btn.style.display = 'block';
+              alert('Something went wrong. Please try again.');
+            },
+          });
+        });
+      });
+    </script>
+    
 </body>
 
 </html>
