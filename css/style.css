@@ -119,8 +119,9 @@ button:focus {
 .main_title {
   text-align: center;
   /* max-width: 680px; */
-  padding: 50px;
-  margin: 0px auto 95px; }
+  padding: 0px;
+  margin: 0px auto 45px;
+}
   @media (max-width: 991px) {
     .main_title {
       margin: 0px auto 35px; } }
