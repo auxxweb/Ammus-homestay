@@ -146,7 +146,6 @@
                         action="contact_process.php"
                         method="post"
                         id="contactform"
-                        novalidate="novalidate"
                       >
                         <div class="row">
                           <div class="col-sm-6">
@@ -186,8 +185,8 @@
                                 id="phoneNumber"
                                 type="text"
                                 onfocus="this.placeholder = ''"
-                                onblur="this.placeholder = 'Enter PhoneNumber'"
-                                placeholder="Enter PhoneNumber"
+                                onblur="this.placeholder = 'Enter phone number'"
+                                placeholder="Enter phone number"
                               />
                             </div>
                           </div>
@@ -200,9 +199,9 @@
                                 cols="30"
                                 rows="9"
                                 onfocus="this.placeholder = ''"
-                                onblur="this.placeholder = 'Enter Message'"
+                                onblur="this.placeholder = 'Enter message'"
+                                placeholder="Enter message"
                                 required
-                                placeholder="Enter Message"
                               ></textarea>
                             </div>
                           </div>
@@ -223,7 +222,7 @@
                             type="submit"
                             class="button button-contactForm boxed-btn"
                             id="loading"
-                            style="display: none;"
+                            style="display: none; background-color: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; transition: background-color 0.3s ease;"
                           >
                             Submitting...
                           </button>
@@ -261,7 +260,7 @@
         }
         .contact_info {
             background: #fff;
-            padding: 20px;
+            padding: 18px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -329,7 +328,7 @@
             <div class="footer_widget">
               <h3 class="footer_title" style="color: azure;">Newsletter</h3>
               <div id="successMessage1" style="display: none;" class="alert alert-success text-center">
-                Thank you! for Subscribe
+                Thank you for Subscribing!
               </div>
               <form method="post" id="contactform1" class="newsletter_form">
                 <input
@@ -344,7 +343,7 @@
                     <button id="s-btn1" class="subscribe-button" type="submit">
                         Subscribe
                     </button>
-                    <button id="loading1" class="Subscribing" style="display: none;">
+                    <button id="loading1" class="subscribe-button" style="display: none;">
                         Subscribing...
                     </button>
                 </div>
@@ -392,14 +391,14 @@
           </style>
           </div>
         </div>
-        <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
+        <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
           <div>
             <p class="footer-text m-0">
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               Copyright &copy;
               <script>document.write(new Date().getFullYear());</script> All rights reserved | This website
 
-              is Designed & created by <a href="https://www.auxxweb.in/#" target="_blank">Auxxweb Solutions</a>
+              is designed & develped by <a href="https://www.auxxweb.in/#" target="_blank">Auxxweb Solutions</a>
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
@@ -482,16 +481,16 @@
           e.preventDefault()
     
           // Validation
-          const name = $('#name').val().trim();
-          const email = $('#email').val().trim();
-          const phoneNumber = $('#phoneNumber').val().trim();
-          const message = $('#message').val().trim();
+          // const name = $('#name').val().trim();
+          // const email = $('#email').val().trim();
+          // const phoneNumber = $('#phoneNumber').val().trim();
+          // const message = $('#message').val().trim();
     
           // Check if all fields have values
-          if (!name || !email || !phoneNumber || !message) {
-            alert('Please fill in all fields.');
-            return;
-          }
+          // if (!name || !email || !phoneNumber || !message) {
+          //   alert('Please fill in all fields.');
+          //   return;
+          // }
     
           const loading = document.getElementById('loading');
           const btn = document.getElementById('s-btn');
