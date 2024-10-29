@@ -27,7 +27,7 @@
 </head>
 
 <body>
-<script>
+<!-- <script>
 	document.addEventListener('DOMContentLoaded', function() {
 		document.getElementById('loadMoreBtn').addEventListener('click', function(event) {
 			event.preventDefault(); // Prevent the link from navigating
@@ -104,7 +104,7 @@
 	});
 });
 	
-</script>
+</script> -->
 <script>
     $(document).ready(function() {
         $('.img-pop-home').magnificPopup({
@@ -167,7 +167,11 @@
 		</div>
 	</section>
 	<!--================End Home Banner Area =================-->
-
+	<section>
+		<div>
+			<h4 style="display: flex; justify-content: center; margin-top: 100px;">A Glimpse of Serenity: Discover the Beauty of Ammu's Homestay</h4>
+		</div>
+	</section>
 	<!--================Gallery Area =================-->
 	<section class="gallery_area section_gap" id="gallery">
 		<div class="container">
@@ -245,16 +249,49 @@
 							</div>
 						</div>
 					</div>
+					<div class="col-lg-4 col-md-6 all">
+						<div class="single-gallery">
+							<div class="overlay"></div>
+							<img class="img-fluid w-100 " style="height: 200px;" src="img/Home/filmstarts.jpg" alt="">
+							<div class="icon">
+								<a href="img/Home/leafhome.jpg" class="img-pop-home">
+									<img src="img/zoom-icon.png" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 all">
+						<div class="single-gallery">
+							<div class="overlay"></div>
+							<img class="img-fluid w-100" src="img/Home/room2.jpg" alt="">
+							<div class="icon">
+								<a href="img/Home/room2.jpg" class="img-pop-home">
+									<img src="img/zoom-icon.png" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 all">
+						<div class="single-gallery">
+							<div class="overlay"></div>
+							<img class="img-fluid w-100" src="img/Home/with mist.jpg" alt="">
+							<div class="icon">
+								<a href="img/Home/with mist.jpg" class="img-pop-home">
+									<img src="img/zoom-icon.png" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 
 			<!-- <div class="text-center mt-25">
 				<a href="" class="main_btn">Load More Image</a>
 			</div> -->
-			<div class="text-center mt-25">
+			<!-- <div class="text-center mt-25">
 				<a href="#" id="loadMoreBtn" class="main_btn">Load More Images</a>
 			</div>
-			
+			 -->
 			<!-- A container where the new images will be loaded -->
 			<div id="imageContainer" class="image_container mt-4">
 				<!-- Initially, there are no extra images -->
@@ -273,7 +310,9 @@
 					<div class="single-footer-widget">
 						<h6>About Agency</h6>
 						<p>
-							Nestled in Wayanad's lush greenery and misty peaks,our homestay is perfect for nature lovers and adventurers.Known as the "Spice Garden of the South,"Wayanad is home to rich history,coffee,and tea plantations.
+							Nestled in Wayanad's lush greenery and misty peaks,our homestay is perfect for nature lovers
+							and adventurers.Known as the "Spice Garden of the South,"Wayanad is home to rich
+							history,coffee,and tea plantations.
 						</p>
 					</div>
 				</div>
@@ -288,113 +327,85 @@
 								<li><a href="./rooms.html">Rooms</a></li>
 								<li><a href="./contact.html">Contact</a></li>
 							</ul>
-							<!-- <ul class="col footer-nav">
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="#">Terms of Use</a></li>
-								<li><a href="#">Help Center</a></li>
-								<li><a href="#">Newsletters</a></li>
-								<li><a href="#">Feedback</a></li>
-							</ul> -->
+							
 						</div>
 					</div>
 				</div>
 				<!-- Newsletter -->
-<div class="col-xl-4 col-md-6 col-lg-4">
-	<div class="footer_widget">
-	  <h3 class="footer_title" style="color: azure;">Newsletter</h3>
-	  <div
-		id="successMessage1"
-		style="display: none;"
-		class="alert alert-success text-center"
-	  >
-		Thank you! for Subscribe
-	  </div>
-	  <form method="post" id="contactform1" class="newsletter_form">
-		<input
-		  style="color: rgb(75, 75, 75) !important;"
-		  type="email"
-		  name="email"
-		  required
-		  placeholder="Enter your mail"
-		/>
-		<button id="s-btn1">
-		  Subscribe
-		</button>
-
-		<button style="display: none;" id="loading1">
-		  Subscribing...
-		</button>
-	  </form>
-	  <p class="newsletter_text">
-		Subscribe newsletter to get updates
-	  </p>
-	</div>
-
-	<style>
-	  .newsletter_form input::placeholder {
-		color: #ccc !important; /* Adjust color as needed */
-	  }
-	</style>
-</div>
-
-<!-- newsletter end  -->
-				<!-- <div class="col-lg-3  col-md-6 col-sm-6">
-					<div class="single-footer-widget">
-						<h6>Newsletter</h6>
-						<p>For business professionals caught between high OEM price mediocre print and graphic.</p>
-						<div class="" id="mc_embed_signup">
-
-							<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-							 method="get" class="form-inline">
-
-								<div class="d-flex flex-row">
-
-									<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
-									 required="" type="email">
-
-
-									<button class="click-btn btn btn-default"><i class="lnr lnr-location" aria-hidden="true"></i></button>
-									<div style="position: absolute; left: -5000px;">
-										<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-									</div>
-
-									<div class="col-lg-4 col-md-4">
-										<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
-									</div> 
-								</div>
-								<div class="info"></div>
-							</form>
+				<div class="col-xl-4 col-md-6 col-lg-4">
+					<div class="footer_widget">
+						<h3 class="footer_title" style="color: azure;">Newsletter</h3>
+						<div id="successMessage1" style="display: none;" class="alert alert-success text-center">
+							Thank you! for Subscribe
 						</div>
+						<form method="post" id="contactform1" class="newsletter_form">
+							<input style="color: rgb(216, 210, 210) !important;" type="email" name="email" required
+								placeholder="Enter your mail" />
+						<div class="button-container">
+							<button id="s-btn1" class="subscribe-button">
+								Subscribe
+							</button>
+							<button style="display: none;" id="loading1" class="Subscribing">
+								Subscribing...
+							</button>
+						</div>
+						</form>
+						<p class="newsletter_text">
+							Subscribe newsletter to get updates
+						</p>
 					</div>
-				</div> -->
-				<!-- <div class="col-lg-3  col-md-6 col-sm-6">
-					<div class="single-footer-widget mail-chimp">
-						<h6 class="mb-20">Instafeed</h6>
-						<ul class="instafeed d-flex flex-wrap">
-							<li><img src="img/instagram/Image-01.jpg" alt=""></li>
-							<li><img src="img/instagram/Image-02.jpg" alt=""></li>
-							<li><img src="img/instagram/Image-03.jpg" alt=""></li>
-							<li><img src="img/instagram/Image-04.jpg" alt=""></li>
-							<li><img src="img/instagram/Image-05.jpg" alt=""></li>
-							<li><img src="img/instagram/Image-06.jpg" alt=""></li>
-							<li><img src="img/instagram/Image-07.jpg" alt=""></li>
-							<li><img src="img/instagram/Image-08.jpg" alt=""></li>
-						</ul>
-					</div>
-				</div> -->
+				</div>
+				<style>
+					.newsletter_form input::placeholder {
+						color: #ccc !important; /* Adjust color as needed */
+					}
+				
+					/* Button styles */
+					.button-container {
+						position: relative;
+						width: fit-content;
+						margin-top: 10px;
+					}
+				
+					.subscribe-button {
+						width: 100%; /* Ensures both buttons are the same width */
+						padding: 10px 20px;
+						color: white;
+						background-color: #521104;
+						border: none;
+						border-radius: 5px;
+						cursor: pointer;
+						font-weight: bold;
+						transition: background-color 0.3s ease;
+					}
+				
+					.subscribe-button:hover {
+						background-color: #039f10; /* Darker shade on hover */
+					}
+				
+					.subscribe-button:disabled {
+						background-color: #cccccc; /* Greyed out color when disabled */
+						cursor: not-allowed;
+					}
+					.Subscribing{
+						background-color: #039f10;
+					}
+				</style>
+				</div>
 			</div>
 			<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
 				<div>
-					<p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.auxxweb.in/#" target="_blank">Auxxweb</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+					<p class="footer-text m-0">
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved | This website
+						is Designed & created by <a href="https://www.auxxweb.in/#" target="_blank">Auxxweb Solutions</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
 				</div>
-				<!-- <div class="footer-social d-flex align-items-center">
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-dribbble"></i></a>
-					<a href="#"><i class="fa fa-behance"></i></a>
-				</div> -->
+				<div class="footer-social d-flex align-items-center">
+					<a href="https://www.instagram.com/ammushomestay_2019?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa fa-instagram"></i></a>
+				</div>
 			</div>
 		</div>
 	</footer>
