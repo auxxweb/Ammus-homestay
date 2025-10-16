@@ -142,10 +142,10 @@
         if ($('.owl-room').length) {
             $('.owl-room').owlCarousel({
                 items: 1,
-                loop: true,
+                // loop: true,
                 margin: 0,
                 dots: false,
-                autoplay: true,
+                // autoplay: true,
                 nav: true,
                 navText: ["<span class='lnr lnr-arrow-up'></span>", "<span class='lnr lnr-arrow-down'></span>"]
             });
